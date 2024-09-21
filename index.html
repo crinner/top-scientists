@@ -56,9 +56,9 @@
 	<h1>Web interface for the world's top 2% scientist list</h1>
 
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'overview')">Overview (full table)</button>
-  <button class="tablinks" onclick="openTab(event, 'institution')">Search by institution</button>
-  <button class="tablinks" onclick="openTab(event, 'scientist')">Scientist loopup</button>
+  <button class="tablinks" onclick="openTable1(event, 'overview')">Overview (full table)</button>
+  <button class="tablinks" onclick="openTable1(event, 'institution')">Search by institution</button>
+  <button class="tablinks" onclick="openTable1(event, 'scientist')">Scientist lookup</button>
 </div>
 
 <div id="overview" class="tabcontent">
@@ -76,11 +76,11 @@
 <div id="scientist" class="tabcontent">
   <h3>Individual scientist lookup</h3>
   <p>Search individual records of the world's top 2% scientists by career citations up to 2023.</p>
-  <div> <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e00083652bcf189944adaf57/emb"></script> </div>
+  <!--p> <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e00083652bcf189944adaf57/emb"></script> </p-->
 </div>
 
 <script>
-function openTab(evt, tabName) {
+function openTable1(evt, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -90,12 +90,13 @@ function openTab(evt, tabName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 </script>
 	  
-	<p><i>Data source: Ioannidis (2024) August 2024 data-update for "Updated science-wide author databases of standardized citation indicators", https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7. Created by Dr. Claus Rinner, TMU, September 2024, using Caspio DataPages.</i></p>
+	<p><i>Data source: Ioannidis (2024) August 2024 data-update for "Updated science-wide author databases of standardized citation indicators", https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7. 
+	<br>Created by Dr. Claus Rinner, TMU, September 2024, using Caspio DataPages.</i></p>
 
   </body>
 </html>
