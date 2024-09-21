@@ -48,45 +48,6 @@
   border-top: none;
 }
 
-	.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
-
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
-	
 </style>
 
 </head>
@@ -99,13 +60,30 @@
   <button class="tablinks" onclick="openTable1(event, 'overview')" id="defaultOpen">Overview (full table)</button>
   <button class="tablinks" onclick="openTable1(event, 'institution')">Search by institution</button>
   <button class="tablinks" onclick="openTable1(event, 'scientist')">Scientist lookup</button>
+  <button class="tablinks" onclick="openTable1(event, 'key')">Key</button>
 </div>
 
 <div id="overview" class="tabcontent">
   <h3>Overview</h3>
-  <p>This is the complete data table from Ioannidis (2024) for career citations up to 2023. 
-  See <div class="tooltip">key<span class="tooltiptext">
+  <p>This is the complete data table from Ioannidis (2024) for career citations up to 2023. </p>
+  <div> <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e000538d3a72f0614b3c9c3a/emb"></script> </div>
+</div>
 
+<div id="institution" class="tabcontent">
+  <h3>Citations by institution</h3>
+  <p>Search author career citations up to 2023 by institution</p> 
+  <div> <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e00040054dc9d8ed471b96d3/emb"></script> </div>
+</div>
+
+<div id="scientist" class="tabcontent">
+  <h3>Individual scientist lookup</h3>
+  <p>Search individual records of the world's top 2% scientists by career citations up to 2023.</p>
+  <p> <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e00083652bcf189944adaf57/emb"></script> </p>
+</div>
+
+<div id="key" class="tabcontent">
+  <h3>Key to indicators</h3>
+	
 <table cellspacing="0" border="0">
 	<colgroup span="2" width="204"></colgroup>
 	<tr>
@@ -245,24 +223,9 @@
 		<td align="left">total number of authors within category sm-subfield-1</td>
 	</tr>
 </table>
-	  
-  </span></div> for explanation of field names.
-  </p>
-  <div> <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e000538d3a72f0614b3c9c3a/emb"></script> </div>
-</div>
 
-<div id="institution" class="tabcontent">
-  <h3>Citations by institution</h3>
-  <p>Search author career citations up to 2023 by institution</p> 
-  <div> <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e00040054dc9d8ed471b96d3/emb"></script> </div>
 </div>
-
-<div id="scientist" class="tabcontent">
-  <h3>Individual scientist lookup</h3>
-  <p>Search individual records of the world's top 2% scientists by career citations up to 2023.</p>
-  <p> <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e00083652bcf189944adaf57/emb"></script> </p>
-</div>
-
+	
 <script>
 function openTable1(evt, tabName) {
   var i, tabcontent, tablinks;
