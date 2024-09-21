@@ -3,15 +3,97 @@
   <head>
     <title>The world's top 2% scientists</title>
     <meta name="author" content="Claus Rinner">
-  </head>
 
-  <body>
+/* styles and tabbed page function from w3schools at https://www.w3schools.com/howto/howto_js_tabs.asp */
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	body {font-family: Arial;}
 
-	<h1></h1>Web interface for the world's top 2% scientist list</h1>
-	<p><i>Created by Dr. Claus Rinner, TMU, September 2024</i></p>
-	<p><i>Data source: Ioannidis (2024) August 2024 data-update for "Updated science-wide author databases of standardized citation indicators", https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7</i></p>
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
 
-	<script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e000538d3a72f0614b3c9c3a/emb"></script>
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+
+</head>
+
+<body>
+
+	<h1>Web interface for the world's top 2% scientist list</h1>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'overview')">Overview (full table)</button>
+  <button class="tablinks" onclick="openTab(event, 'institution')">Search by institution</button>
+  <button class="tablinks" onclick="openTab(event, 'scientist')">Scientist loopup</button>
+</div>
+
+<div id="overview" class="tabcontent">
+  <h3>Overview (full 2023 career table)</h3>
+  <p>This is the complete data table from Ioannidis (2024) for career citations up to 2023.</p>
+  <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e000538d3a72f0614b3c9c3a/emb"></script>
+</div>
+
+<div id="institution" class="tabcontent">
+  <h3>Citations by institution</h3>
+  <p>Search author career citations up to 2023 by institution</p> 
+  <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e00040054dc9d8ed471b96d3/emb"></script>
+</div>
+
+<div id="scientist" class="tabcontent">
+  <h3>Individual scientist lookup</h3>
+  <p>Search individual records of the world's top 2% scientists by career citations up to 2023.</p>
+  <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e00083652bcf189944adaf57/emb"></script>
+</div>
+
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+	  
+	<p><i>Data source: Ioannidis (2024) August 2024 data-update for "Updated science-wide author databases of standardized citation indicators", https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7. Created by Dr. Claus Rinner, TMU, September 2024, using Caspio DataPages.</i></p>
 
   </body>
 </html>
