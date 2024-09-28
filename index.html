@@ -62,10 +62,11 @@
   <button class="tablinks" onclick="openTable1(event, 'scientist')">Scientist lookup</button>
   <button class="tablinks" onclick="openTable1(event, 'field')">Search by (sub)field</button>
   <button class="tablinks" onclick="openTable1(event, 'key')">Key and stats</button>
+  <button class="tablinks" onclick="openTable1(event, 'about')">About</button>
 </div>
 
 <div id="overview" class="tabcontent">
-  <p>This is the complete data table from <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7" target=_blank>Ioannidis (2024)</a> for <em>career-long</em> citations up to 2023. The indicators (column headers in the following table) are spelled out in the key tab, above. The single-year citation metrics were made available <a href="https://topresearcherslist.com/" target=_blank>here</a>. </p>
+  <p>This is the complete data table from <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7" target=_blank>Ioannidis (2024)</a> for <em>career-long</em> citations up to 2023. The indicators (column headers in the following table) are spelled out in the "Key and stats" tab, above. The <em>single-year</em> citation metrics were made available <a href="https://topresearcherslist.com/" target=_blank>here</a>. </p>
   <div> <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e000538d3a72f0614b3c9c3a/emb"></script> </div>
 </div>
 
@@ -80,12 +81,18 @@
 </div>
 	
 <div id="scientist" class="tabcontent">
-  <p>Search individual records of the world's top 2% scientists by career citations up to 2023. Academic performance metrics have many limitations; make sure to examine the methodology applied by the creators.</p>
+  <p>Search individual records of the world's top 2% scientists by <em>career-long</em> citations up to 2023. Remember that academic performance metrics have many limitations; make sure to examine the methodology developed by Ioannidis et al. (2020).</p>
   <p> <script type="text/javascript" src="https://c2hmf405.caspio.com/dp/e643e00083652bcf189944adaf57/emb"></script> </p>
 </div>
 
 <div id="key" class="tabcontent">
   <p>Explanation of indicators and statistics for top-level categories (fields of expertise). The addition of <b>(ns)</b> or <b>_ns</b> to an indicator name refers to the version of the indicator that excludes self-citations. Author counts and average ranks per category are charted below the key.</p>
+
+<div id="about" class="tabcontent">
+  <p>Web page, database filters, and charts created by Dr. Claus Rinner, September 2024, using Github Pages and Caspio DataPages. I teach geospatial decision support techniques at Toronto Metropolitan University and my research expertise includes multi-criteria analysis, the concept behind creating composite indices such as the c-index that the top 2% ranking is based on. I wrote a short <a href="https://www.torontomu.ca/geography/news-events/2023/10/geo-faculty-among-top2-scientists/" target=_blank>news item</a> for my Department last year about finding myself on the list of most influential scholars globally.</p>
+  <!--p>data table... avail at Elsevier by too large... DB service</p>
+  <p>prof john ioannidis, stanford... stats... no stranger: covid. film?</p>
+  <p>academic perf metrics pro/con</p-->
 
 <table cellspacing="0" border="0">
 	<colgroup width="189"></colgroup>
@@ -248,10 +255,9 @@ function openTable1(evt, tabName) {
 
 	<script>document.getElementById("defaultOpen").click();</script>
 	  
-	<p><i>Data source: Ioannidis, JPA (2024), August 2024 data-update for "Updated science-wide author databases of standardized citation indicators", Elsevier Data Repository, V7, doi: 10.17632/btchxktzyw.7. Available at <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7" target=_blank>https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7</a>. 
-	<br>Methodology: Ioannidis JPA, Boyack KW, Baas J. Updated science-wide author databases of standardized citation indicators. PLoS Biol. 2020 Oct 16;18(10):e3000918, available at <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000918">https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000918</a>. Also see FAQ list on the publisher web site linked above. 
+	<p><i>Data source: Ioannidis, JPA (2024), August 2024 data-update for "Updated science-wide author databases of standardized citation indicators", Elsevier Data Repository, Version 7, doi: 10.17632/btchxktzyw.7. Available at <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7" target=_blank>https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7</a>. 
 	</i></p>
-	<p><i>Web page, database filters, and charts created by Dr. Claus Rinner, September 2024, using Github Pages and Caspio DataPages (see About tab).</i></p>
+	<p><i>Web page created by Dr. Claus Rinner, September 2024 (see "About" tab for details).</i></p>
 
   </body>
 </html>
