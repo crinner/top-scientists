@@ -1,0 +1,1 @@
+This repository contains the HTML file(s) for the github page at [https://crinner.github.io/top-scientists/](https://crinner.github.io/top-scientists/), a searchable web interface for the ranking of the world's top 2% scientists by Ioannidis/Stanford/Elsevier on the basis of the SCOPUS citation database, 2024 update for 2023 career-long impact. 
